@@ -1,0 +1,39 @@
+{
+  "name": "planets",
+  "version": "1.0.0",
+  "private": true,
+  "description": " Real-time solar system planets info and news",
+  "keywords": [
+    "solar",
+    "system",
+    "planets",
+    "earth",
+    "space"
+  ],
+  "homepage": "https://github.com/JosiasPires/planets#readme",
+  "bugs": {
+    "url": "https://github.com/JosiasPires/planets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosiasPires/planets.git"
+  },
+  "license": "MIT",
+  "author": "JosiasPires",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@tailwindcss/vite": "^4.1.8",
+    "eslint": "^9.27.0",
+    "globals": "^16.2.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.1.8",
+    "vite": "^6.3.5"
+  }
+}
