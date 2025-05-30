@@ -23,8 +23,8 @@ jobs:
         run: node src/api/news.js
 
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/data/news.json
           git commit -m "Update news.json"
           git push
