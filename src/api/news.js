@@ -1,6 +1,7 @@
 import { solarSystem } from "../data/solar-system.js";
 import fs from "fs/promises";
 import path from "path";
+import { fileURLToPath } from "url";
 
 const __dirname = import.meta.dirname;
 
