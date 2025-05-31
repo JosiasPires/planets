@@ -9,17 +9,18 @@ jobs:
   update-news:
     runs-on: ubuntu-latest
 
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
     steps:
         - uses: actions/checkout@v4
 
         - uses: actions/setup-node@v4
-        with:
-          node-version: 20
+          with:
+            node-version: 20
 
         - run: npm ci
 
-        env:
-          API_KEY: ${{ secrets.API_KEY }}
+        
         - run: node src/api/news.js
 
         - run: |
