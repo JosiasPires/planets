@@ -42,7 +42,6 @@ export function loadInfo(order) {
 
 export function loadNews(order) {
   const newsPlanet = news[solarSystem[order].name];
-  console.log(newsPlanet);
   for (let i = 0; i < 3; i++) {
     document.querySelector(`#news${i}`).href = newsPlanet[i].url;
     document.querySelector(`#newsImage${i}`).src = newsPlanet[i].image;
