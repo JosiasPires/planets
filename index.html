@@ -8,7 +8,22 @@
     <title>Vite App</title>
     <script type="module" src="/src/main.js"></script>
   </head>
-  <body class="bg-[url(star.svg)] bg-slate-950">
-    
+  <body
+    class="grid h-screen grid-cols-2 grid-rows-4 place-items-center bg-slate-950 bg-[url(star.svg)] bg-size-[28px] text-white"
+  >
+    <button type="button" id="previous" class="-rotate-90 text-5xl font-extrabold">></button>
+    <div id="planetList" class="flex flex-col items-center gap-16 row-start-2 row-end-4 bg-amber-300 h-full"></div>
+    <button type="button" id="next" class="row-start-4 rotate-90 text-5xl font-extrabold">></button>
+    <div class="col-start-2 row-start-1 row-end-2 flex items-center justify-around w-full gap-8 p-4">
+      <h2 id="name" class="text-8xl font-bold">Name</h2>
+      <div>
+        <p class="text-2xl"><span id="description"></span></p>
+        <p class="text-2xl">Radius: <span id="radius"></span></p>
+        <p class="text-2xl">Mass: <span id="mass"></span></p>
+        <p class="text-2xl">Distance: <span id="distance"></span></p>
+      </div>
+    </div>
+    <div id="news" class="row-start-2 row-end-4">news</div>
+    <h1 class="col-start-2 row-start-4 text-9xl">Solar System</h1>
   </body>
 </html>
