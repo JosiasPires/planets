@@ -1,4 +1,5 @@
 import { solarSystem } from "../data/solar-system";
+import news from "../data/news.json";
 
 const planetList = document.querySelector("#planetList");
 
@@ -35,4 +36,15 @@ export function loadInfo(order) {
     document.querySelector('#radius').textContent = solarSystem[order].radius_km + 'km';
     document.querySelector('#mass').textContent = solarSystem[order].mass_kg + 'kg';
     document.querySelector('#distance').textContent = solarSystem[order].distance_from_sun_km + 'km';
+}
+
+export function loadNews(order) {
+    const newsPlanet = news[solarSystem[order].name];
+    console.log(newsPlanet);
+    for (let i = 0; i < 3; i++) {
+        document.querySelector(`#news${i}`).href = newsPlanet[i].url;
+        document.querySelector(`#newsImage${i}`).src = newsPlanet[i].image;
+        document.querySelector(`#newsTitle${i}`).textContent = newsPlanet[i].title;
+        document.querySelector(`#newsDesc${i}`).textContent = newsPlanet[i].description;
+    }
 }

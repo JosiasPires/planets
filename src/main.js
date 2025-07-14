@@ -1,10 +1,11 @@
 import { solarSystem } from "./data/solar-system";
-import { loadInfo, loadPlanets, transformPlanetsY } from "./modules/planets";
+import { loadInfo, loadNews, loadPlanets, transformPlanetsY } from "./modules/planets";
 import "./style.css";
 
 let selected = 0;
 loadPlanets();
 loadInfo(selected);
+loadNews(selected);
 
 document.querySelector('#previous').addEventListener('click', () => {
     if (selected > 0) {
@@ -12,6 +13,7 @@ document.querySelector('#previous').addEventListener('click', () => {
         selected = selected - 1;
     }
     loadInfo(selected);
+    loadNews(selected);
 })
 document.querySelector('#next').addEventListener('click', () => {
     if (selected < solarSystem.length - 1) {
@@ -23,4 +25,5 @@ document.querySelector('#next').addEventListener('click', () => {
         selected = 0;
     }
     loadInfo(selected);
+    loadNews(selected);
 })
