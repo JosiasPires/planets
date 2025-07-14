@@ -9,10 +9,11 @@
     <script type="module" src="/src/main.js"></script>
   </head>
   <body
-    class="grid h-screen grid-cols-2 grid-rows-4 place-items-center bg-slate-950 bg-[url(star.svg)] bg-size-[28px] text-white"
+    class="grid h-screen grid-cols-2 grid-rows-4 place-items-center bg-slate-950 bg-[url(star.svg)] bg-size-[28px] text-white overflow-y-hidden"
   >
-    <button type="button" id="previous" class="-rotate-90 text-5xl font-extrabold">></button>
-    <div id="planetList" class="flex flex-col items-center gap-16 row-start-2 row-end-4 bg-amber-300 h-full"></div>
+    <button type="button" id="previous" class="-rotate-90 text-5xl font-extrabold z-10">></button>
+    <div id="planetList" class="flex flex-col items-center row-start-2 row-end-4 bg-amber-300 h-full transition-transform ease-in-out"></div>
+
     <button type="button" id="next" class="row-start-4 rotate-90 text-5xl font-extrabold">></button>
     <div class="col-start-2 row-start-1 row-end-2 flex items-center justify-around w-full gap-8 p-4">
       <h2 id="name" class="text-8xl font-bold">Name</h2>
