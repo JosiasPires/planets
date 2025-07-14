@@ -11,9 +11,10 @@
   <body
     class="grid h-screen grid-cols-3 grid-rows-4 place-items-center bg-slate-950 bg-[url(star.svg)] bg-size-[28px] text-white overflow-y-hidden"
   >
-    <button type="button" id="previous" class="-rotate-90 text-5xl font-extrabold z-10">></button>
-    <div id="planetList" class="flex flex-col items-center row-start-2 row-end-4 h-full transition-transform ease-in-out"></div>
-    <button type="button" id="next" class="row-start-4 rotate-90 text-5xl font-extrabold">></button>
+    <div id="vignette" class="w-full h-full col-start-1 col-end-4 row-start-1 row-end-5 z-20 pointer-events-none"></div>
+    <button type="button" id="previous" class="-rotate-90 text-5xl font-extrabold z-10 col-start-1 col-end-2 row-start-1 row-end-2">></button>
+    <div id="planetList" class="flex flex-col items-center row-start-2 row-end-4 col-start-1 col-end-2 h-full transition-transform ease-in-out"></div>
+    <button type="button" id="next" class="z-10 pointer-events-auto row-start-4 row-end-5 rotate-90 text-5xl font-extrabold col-start-1 col-end-2">></button>
     <div class="col-start-2 col-end-4 row-start-1 row-end-2 flex items-center justify-around w-full gap-8 p-4">
       <h2 id="name" class="text-8xl font-bold">Name</h2>
       <div>
@@ -47,6 +48,6 @@
       </a>
 
     </div>
-    <h1 class="col-start-2 col-end-4 row-start-4 text-9xl">Solar System</h1>
+    <h1 class="col-start-2 col-end-4 row-start-4 row-end-5 text-9xl">Solar System</h1>
   </body>
 </html>
