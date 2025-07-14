@@ -3,6 +3,11 @@ import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
+const lastYear = new Date();
+lastYear.setFullYear(lastYear.getUTCFullYear() - 1);
+
+const startDate = lastYear.toISOString();
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const API_KEY = process.env.API_KEY;
@@ -16,7 +21,7 @@ for (let i = 0; i < solarSystem.length; i++) {
   );
 
   const res = await fetch(
-    `https://api.currentsapi.services/v1/search?category=space&domain=space.com&page_size=3&keywords=${name}&apiKey=${API_KEY}`,
+    `https://api.currentsapi.services/v1/search?category=space&domain=space.com&page_size=3&start_date=${startDate}&keywords=${name}&apiKey=${API_KEY}`,
   );
 
   const data = await res.json();
