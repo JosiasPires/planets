@@ -14,7 +14,7 @@ const API_KEY = process.env.API_KEY;
 const news = {};
 
 async function fetchNews(topic) {
-  while (true) {
+  for (let i = 0; i < 3; i++) {
     const response = await fetch(
       `https://api.currentsapi.services/v1/search?category=space&domain=space.com&page_size=3&start_date=${startDate}&keywords=${topic}&apiKey=${API_KEY}`,
     );
@@ -28,6 +28,8 @@ async function fetchNews(topic) {
     }
     await new Promise((res) => setTimeout(res, 2000));
   }
+  console.log(`failed to fetch news about ${topic}`);
+  return {}
 }
 
 for (let i = 0; i < solarSystem.length; i++) {
