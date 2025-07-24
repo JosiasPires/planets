@@ -26,7 +26,7 @@ async function fetchNews(topic) {
     } else {
       console.log("error, trying again");
     }
-    await new Promise((res) => setTimeout(res, 2000));
+    await new Promise((res) => setTimeout(res, 10000));
   }
   console.log(`failed to fetch news about ${topic}`);
   return {}
