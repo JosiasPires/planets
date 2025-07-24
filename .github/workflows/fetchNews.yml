@@ -1,4 +1,4 @@
-name: Update news.json daily
+name: Update news.json weekly
 
 on:
   schedule:
